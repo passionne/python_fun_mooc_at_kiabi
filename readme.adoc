@@ -14,3 +14,43 @@ fonction (1, 2, 5) retourne [1, 2, 3, 5, 8]
 
 n = n-1 + n-2
 
+
+
+== Exercice 2 - génération de fichier avec donnée aléatoire
+
+Créer un fichier csv avec les colonnes : code article; libelle; prix; quantité
+
+==== Rappel :
+
+Le séparateur de colonne est le point virgule ";".
+
+
+===== écrire dans un fichier :
+
+[source,python]
+----
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+f = open(filename, 'w')
+f.write("code article;libelle;prix;quantité\n")
+f.close()
+----
+
+===== généré de la donnée aléatoire :
+
+[source,python]
+----
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import random
+
+# nombre décimale aléatoire entre 0 et 1
+random.random()
+
+# nombre entier aléatoire entre 0 et 9
+random.randint(0,9)
+
+# caractère aléatoire parmis les lettres 'TFGLM'
+random.choice('TFGLM')
+----
+
