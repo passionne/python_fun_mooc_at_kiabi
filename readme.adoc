@@ -1,0 +1,16 @@
+= Découvrir python via Fun MOOC et quelques exercices
+
+== Exercice 1 - Fibonacci
+
+Créer une fonction qui retourne n élements correspondant à la suite de fibonacci à partir de a et b :
+
+fonction ( a, b, n ) retourne [n élement]
+
+==== Exemple :
+
+fonction (1, 2, 5) retourne [1, 2, 3, 5, 8]
+
+==== Rappel :
+
+n = n-1 + n-2
+
