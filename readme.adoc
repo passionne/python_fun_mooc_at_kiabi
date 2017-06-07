@@ -75,3 +75,59 @@ assert found_unique([1,5,2,4,3,4,2,5,1]) == 3
 assert found_unique([1,1,2,2,3,3,4,4,5]) == 5
 assert found_unique([1,1,2,3,3,4,4,5,5]) == 2
 ----
+
+
+== Exercice 4 - Oh toi mon itérable
+
+Implémenté un itérateur qui ne donne que les entier pair jusque 10 inclus.
+Un second itérateur qui ne donne que les entier impaire  jusque 11 inclus.
+Et un dernier itérateur qui retourne tous les entiers modulo n, avec n fourni, jusque 12 inclus.
+
+
+[source,python]
+----
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+class Pair:
+    max = 10
+    nextVal = 0
+
+    def __iter__(self):
+        return self
+
+    def next(self):
+        raise StopIteration()
+
+
+class Impair:
+    max = 10
+    cur = 0
+
+    def __iter__(self):
+        return self
+
+    def next(self):
+        raise StopIteration()
+
+
+class Modulo:
+    max = 10
+    cur = 0
+    mod = 0
+
+    def __init__(self, mod):
+        self.mod = mod
+
+    def __iter__(self):
+        return self
+
+    def next(self):
+        raise StopIteration()
+
+
+assert [i for i in Pair()] == [0, 2, 4, 6, 8, 10]
+assert [i for i in Impair()] == [0, 1, 3, 5, 7, 9, 11]
+assert [i for i in Modulo(3)] == [0, 3, 6, 9, 12]
+assert [i for i in Modulo(4)] == [0, 4, 8, 12]
+----
