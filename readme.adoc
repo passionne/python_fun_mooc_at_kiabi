@@ -54,3 +54,24 @@ random.randint(0,9)
 random.choice('TFGLM')
 ----
 
+
+== Exercice 3 - trouvé l'élément unique
+
+Le principe : à partir d'une liste d'entier dont la taille est un nombre impair d'élément.
+Tous les éléments sauf un sont en doubles.
+Écrire un algoritme qui permettent de trouvé l'élément unique.
+
+[source,python]
+----
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+def found_unique(l):
+    # TODO
+    pass
+
+assert found_unique([1,1,2,2,3,4,4,5,5]) == 3
+assert found_unique([1,5,2,4,3,4,2,5,1]) == 3
+assert found_unique([1,1,2,2,3,3,4,4,5]) == 5
+assert found_unique([1,1,2,3,3,4,4,5,5]) == 2
+----
