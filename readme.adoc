@@ -111,6 +111,8 @@ Implémenté un itérateur qui ne donne que les entier pair jusque 10 inclus.
 Un second itérateur qui ne donne que les entier impaire  jusque 11 inclus.
 Et un dernier itérateur qui retourne tous les entiers modulo n, avec n fourni, jusque 12 inclus.
 
+Plus d'info ici :
+http://anandology.com/python-practice-book/iterators.html
 
 [source,python]
 ----
@@ -119,9 +121,10 @@ Et un dernier itérateur qui retourne tous les entiers modulo n, avec n fourni, 
 
 class Pair:
     max = 10
-    nextVal = 0
+    cur = 0
 
     def __iter__(self):
+        print("Pair max = {}".format(self.max))
         return self
 
     def next(self):
@@ -129,8 +132,7 @@ class Pair:
 
 
 class Impair:
-    max = 10
-    cur = 0
+    max = 11
 
     def __iter__(self):
         return self
@@ -139,13 +141,12 @@ class Impair:
         raise StopIteration()
 
 
-class Modulo:
-    max = 10
-    cur = 0
-    mod = 0
+class Multiple:
+    max = 12
+    m = 0
 
-    def __init__(self, mod):
-        self.mod = mod
+    def __init__(self, m):
+        self.m = m
 
     def __iter__(self):
         return self
@@ -154,8 +155,9 @@ class Modulo:
         raise StopIteration()
 
 
-assert [i for i in Pair()] == [0, 2, 4, 6, 8, 10]
-assert [i for i in Impair()] == [0, 1, 3, 5, 7, 9, 11]
-assert [i for i in Modulo(3)] == [0, 3, 6, 9, 12]
-assert [i for i in Modulo(4)] == [0, 4, 8, 12]
+if __name__ == "__main__" :
+    assert [i for i in Pair()] == [2, 4, 6, 8, 10]
+    assert [i for i in Impair()] == [1, 3, 5, 7, 9, 11]
+    assert [i for i in Multiple(3)] == [3, 6, 9, 12]
+    assert [i for i in Multiple(4)] == [4, 8, 12]
 ----
