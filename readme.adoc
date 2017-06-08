@@ -77,7 +77,35 @@ assert found_unique([1,1,2,3,3,4,4,5,5]) == 2
 ----
 
 
-== Exercice 4 - Oh toi mon itérable
+== Exercice 4 - speak i18n
+
+En utilisant le dictionnaire "trad", implémenté la fonction sayHello pour dire
+
+[source,python]
+----
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+trad = {
+    "FR": "Bonjour",
+    "EN": "Hello",
+    "ES": "Ola"
+}
+
+def sayHello(codePays, nom):
+    pass
+
+assert sayHello("FR", "jack") == "Bonjour jack!"
+assert sayHello("EN", "alice") == "Hello alice!"
+assert sayHello("ES", "bob") == "Ola bob!"
+
+print("Done")
+----
+
+
+
+
+== Exercice 5 - Oh toi mon itérable
 
 Implémenté un itérateur qui ne donne que les entier pair jusque 10 inclus.
 Un second itérateur qui ne donne que les entier impaire  jusque 11 inclus.
