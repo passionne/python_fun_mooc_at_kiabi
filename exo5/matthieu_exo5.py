@@ -18,15 +18,21 @@ class Pair:
         return self.cur
 
 
-class Impair:
+# class Impair:
+#     max = 11
+#
+#     def __iter__(self):
+#         nextVal = 1
+#         while nextVal <= self.max:
+#             yield nextVal
+#             nextVal += 2
+
+def Impair():
     max = 11
-
-    def __iter__(self):
-        nextVal = 1
-        while nextVal <= self.max:
-            yield nextVal
-            nextVal += 2
-
+    nextVal = 1
+    while nextVal <= max:
+        yield nextVal
+        nextVal += 2
 
 class Multiple:
     max = 12
