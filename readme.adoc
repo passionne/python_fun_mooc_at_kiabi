@@ -161,3 +161,30 @@ if __name__ == "__main__" :
     assert [i for i in Multiple(3)] == [3, 6, 9, 12]
     assert [i for i in Multiple(4)] == [4, 8, 12]
 ----
+
+
+
+== Exercice 6 - TODO later...
+
+
+
+
+
+== Exercice 7 - Bingo !
+
+Le but ici est d'utiliser les concepts de module et de class.
+
+Nous allons créer un jeu de https://fr.wikipedia.org/wiki/Bingo[Bingo] (simplifié) tel que :
+Nous avons plusieurs joueurs, chaque joueurs possède une carte.
+Au démarrage du jeu, toutes les cartes sont intialisé avec un nombre entre 0 et 10. Tous les nombres de la carte sont différents.
+A chaque tour, on génère un nombre entre 0 et 10, et chaque joueur vient le cas échéant remplir sa carte.
+Le premier joueur ayant rempli sa carte gagne et crie Bingo ! Ce qui arrête le jeu.
+
+Note : pour rappel nous avons déjà utilisé un générateur de nombre aléatoire dans l'excercice 2.
+
+[source,python]
+----
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+----
